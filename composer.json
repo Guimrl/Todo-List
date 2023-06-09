@@ -1,0 +1,15 @@
+{
+    "name": "codespace/todo-list",
+    "autoload": {
+        "psr-4": {
+            "Codespace\\TodoList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Amaral",
+            "email": "gui.amaral123@outlook.com"
+        }
+    ],
+    "require": {}
+}
