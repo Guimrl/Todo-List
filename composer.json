@@ -2,8 +2,14 @@
     "name": "codespace/todo-list",
     "autoload": {
         "psr-4": {
-            "Codespace\\TodoList\\": "src/"
+            "backend\\": "backend/"
         }
+    },
+    "scripts": {
+        "dev": "php -S localhost:8000",
+        "cs": "phpcs --standard=PSR12 backend/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": ["@phan", "@cs"]
     },
     "authors": [
         {
@@ -11,5 +17,14 @@
             "email": "gui.amaral123@outlook.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7",
+        "phan/phan": "^5.4"
+    },
+    "scripts-descriptions": {
+        "dev": "starts the integrated php server",
+        "cs": "look for errors in code using code sniffer",
+        "phan": "detect errors in the code pattern using phan",
+        "check": "starts all scripts defined: test, cs, phan"
+    }
 }
