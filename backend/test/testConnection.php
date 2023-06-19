@@ -1,6 +1,10 @@
 <?php
 
-$config = new \backend\config\Connection();
+namespace backend\test;
+
+use backend\config\Connection;
+
+$config = new Connection();
 $conn = $config->connect();
 
 if ($conn) {
@@ -8,4 +12,3 @@ if ($conn) {
 } else {
     echo "Falha na conexão.";
 }
-
